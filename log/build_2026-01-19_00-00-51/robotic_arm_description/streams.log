@@ -1,0 +1,44 @@
+[0.011s] Invoking command in '/home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bhoomika/pico_ws2/install/crsf_ros2:/home/bhoomika/ros2_workspace/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description -- -j20 -l20
+[0.046s] Invoked command in '/home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bhoomika/pico_ws2/install/crsf_ros2:/home/bhoomika/ros2_workspace/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description -- -j20 -l20
+[0.058s] Invoking command in '/home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bhoomika/pico_ws2/install/crsf_ros2:/home/bhoomika/ros2_workspace/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description
+[0.069s] -- Install configuration: ""
+[0.069s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/launch
+[0.069s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/launch/display.launch.py
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/left_gripper.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/right_front_wheel.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/arm_link_2.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/gripper_base.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/arm_link_1.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/gear_gripper_left.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/lead_screw.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/arm_link_3.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/gripper_holder_link.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/gripper_holder_base.stl
+[0.070s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/right_back_wheel.stl
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/base_link.stl
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/right_gripper.stl
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/left_back_wheel.stl
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/visual/left_front_wheel.stl
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/meshes/collision
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/urdf
+[0.071s] -- Installing: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/urdf/robotic_arm.urdf.xacro
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/urdf/materials.xacro
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/rviz
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/ament_index/resource_index/package_run_dependencies/robotic_arm_description
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/ament_index/resource_index/parent_prefix_path/robotic_arm_description
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/environment/ament_prefix_path.sh
+[0.071s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/environment/ament_prefix_path.dsv
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/environment/path.sh
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/environment/path.dsv
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/local_setup.bash
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/local_setup.sh
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/local_setup.zsh
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/local_setup.dsv
+[0.072s] -- Installing: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/package.dsv
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/ament_index/resource_index/packages/robotic_arm_description
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/cmake/robotic_arm_descriptionConfig.cmake
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/cmake/robotic_arm_descriptionConfig-version.cmake
+[0.072s] -- Up-to-date: /home/bhoomika/ros2_ws/src/robotic_arm_description/install/robotic_arm_description/share/robotic_arm_description/package.xml
+[0.073s] Invoked command in '/home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bhoomika/pico_ws2/install/crsf_ros2:/home/bhoomika/ros2_workspace/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/bhoomika/ros2_ws/src/robotic_arm_description/build/robotic_arm_description

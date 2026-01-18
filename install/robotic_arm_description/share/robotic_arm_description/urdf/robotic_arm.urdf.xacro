@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<robot name="robotic_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robotic_arm_description)/urdf/materials.xacro" />
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/> 
+        </geometry>
+      <material name="wood_color"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.3 0.1"/> </geometry>
+    </collision>
+  </link>
+  
+  <joint name="lead_screw_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lead_screw_link"/>
+    <origin xyz="0.15 0 0.2" rpy="0 0 0"/> 
+  </joint>
+
+  <link name="lead_screw_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/lead_screw.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="metal_grey"/>
+    </visual>
+  </link>
+  
+  <xacro:macro name="wheel" params="prefix x_pos y_pos z_pos roll yaw mesh_file">
+    
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${prefix}_wheel"/>
+      <origin xyz="${x_pos} ${y_pos} ${z_pos}" rpy="0 0 ${yaw}"/> 
+      <axis xyz="0 1 0"/> </joint>
+
+    <link name="${prefix}_wheel">
+      <visual>
+        <origin xyz="0 0 0" rpy="${roll} 0 0"/> 
+        <geometry>
+          <mesh filename="package://robotic_arm_description/meshes/visual/${mesh_file}" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="wheel_black"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${roll} 0 0"/>
+        <geometry>
+           <cylinder length="0.05" radius="0.1"/> </geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+
+  <!-- <xacro:wheel prefix="front_left"  
+    x_pos="0.217"   y_pos="0.23"  z_pos="0.00"  
+    roll="1.57"   yaw="0"       mesh_file="left_front_wheel.stl"/>
+    
+  <xacro:wheel prefix="front_right" 
+    x_pos="0.417"   y_pos="-0.43" z_pos="-0.05"  
+    roll="0"   yaw="3.14"    mesh_file="right_front_wheel.stl"/>
+
+  <xacro:wheel prefix="back_left"   
+    x_pos="-0.217"  y_pos="0.23"  z_pos="0.00"  
+    roll="1.57"   yaw="0"       mesh_file="left_back_wheel.stl"/>
+    
+  <xacro:wheel prefix="back_right"  
+    x_pos="-0.417"  y_pos="-0.43" z_pos="-0.05"  
+    roll="0"   yaw="3.14"    mesh_file="right_back_wheel.stl"/> -->
+    <xacro:wheel prefix="front_left"  
+    x_pos="0.217"   y_pos="0.23"  z_pos="0.00"  
+    roll="1.57"     yaw="0"       mesh_file="left_front_wheel.stl"/>
+    
+  <xacro:wheel prefix="front_right" 
+    x_pos="0.217"   y_pos="-0.23" z_pos="0.00"  
+    roll="1.57"     yaw="3.14"    mesh_file="left_front_wheel.stl"/> <xacro:wheel prefix="back_left"   
+    x_pos="-0.217"  y_pos="0.23"  z_pos="0.00"  
+    roll="1.57"     yaw="0"       mesh_file="left_back_wheel.stl"/>
+    
+  <xacro:wheel prefix="back_right"  
+    x_pos="-0.217"  y_pos="-0.23" z_pos="0.00"  
+    roll="1.57"     yaw="3.14"    mesh_file="left_back_wheel.stl"/> ```
+
+  <joint name="lift_joint" type="prismatic">
+    <parent link="base_link"/>
+    <child link="lift_link"/>
+    <origin xyz="0.1 0 0.1" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/> <limit lower="0" upper="0.5" effort="100" velocity="0.5"/>
+  </joint>
+
+  <link name="lift_link"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/arm_link_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="metal_grey"/>
+    </visual>
+  </link>
+
+  <joint name="shoulder_joint" type="revolute">
+    <parent link="lift_link"/>
+    <child link="arm_link"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/> <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="arm_link"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/arm_link_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="plastic_white"/>
+    </visual>
+  </link>
+
+  <joint name="elbow_joint" type="revolute">
+    <parent link="arm_link"/>
+    <child link="forearm_link"/>
+    <origin xyz="0.3 0 0" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.0" upper="2.0" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="forearm_link"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/arm_link_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="plastic_white"/>
+    </visual>
+  </link>
+
+  <joint name="wrist_joint" type="revolute">
+    <parent link="forearm_link"/>
+    <child link="gripper_base_link"/>
+    <origin xyz="0.3 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/> <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="gripper_base_link"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/gripper_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gripper_orange"/>
+    </visual>
+  </link>
+
+  <joint name="left_finger_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="left_finger"/>
+    <origin xyz="0.05 0.02 0" rpy="0 0 0"/> <axis xyz="0 0 1"/>
+    <limit lower="0" upper="0.5" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="left_finger">
+    <visual>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/left_gripper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gripper_orange"/>
+    </visual>
+  </link>
+
+  <joint name="right_finger_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="right_finger"/>
+    <origin xyz="0.05 -0.02 0" rpy="0 0 0"/> <axis xyz="0 0 -1"/> <limit lower="0" upper="0.5" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="right_finger">
+    <visual>
+      <geometry>
+        <mesh filename="package://robotic_arm_description/meshes/visual/right_gripper.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gripper_orange"/>
+    </visual>
+  </link>
+
+</robot>
